@@ -1,0 +1,10 @@
+.container{
+   border: 2px solid green;
+   display: flex;
+}
+.div{
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+}

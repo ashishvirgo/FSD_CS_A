@@ -1,9 +1,10 @@
 function register(){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-             return reject("Network Error");
-            console.log("register end");
+            //  return reject("Network Error");
             
+            console.log("register end");
+            resolve();
         },4000);
     })
     
@@ -22,8 +23,9 @@ function sendemail(){
 function login(){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
+            return reject("login failed");
             console.log("login end");
-            resolve();
+            // resolve();
         },6000);
     })
     
@@ -50,9 +52,17 @@ function displaydata(){
     
 }
 
-register().then(sendemail).then(login)
-          .then(getuserdata)
-          .then(displaydata)
-          .catch((err)=>{
-           console.log("Error:"+err);
-          })
+ async function authenticate(){
+    try{
+     await register();
+    await sendemail();
+    await login();
+    await getuserdata();
+    await displaydata();
+    }
+    catch(err){
+        console.log("Error:",err);
+    }
+}
+
+authenticate();
