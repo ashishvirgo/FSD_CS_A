@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="/CSS/style.css"/>
+    
+</head>
+<body>
+    <div class="container">
+      
+        <div class="reg-form">
+            <h1>User Profile</h1>
+            <form name="register" id="register" method="post" action="#"></form>
+                <label for="name">Name</label><br/>
+                <input type="text" name="sname" placeholder="Enter Student Name" required/><br/>
+                <label for="fname">Fathers Name</label><br/>
+                <input type="text" name="fname" placeholder="Enter Father Name" required/><br/>
+                <label for="mname">Mother's Name</label><br/>
+                <input type="text" name="mname" placeholder="Enter Mother Name" required/><br/>
+                <label for="mobile">Mobile Number</label><br/>
+                <input type="text" name="mobile" placeholder="Enter Mobile Number" required/><br/>
+                <label for="gender">Gender</label><br/>
+                <input type="radio" name="gender" value="Male" checked/>Male
+                <input type="radio" name="gender" value="FeMale"/>FeMale<br/>
+                <label for="dob">Date of Birth</label><br/>
+                <input type="date" name="dob" placeholder="Enter Date of Birth" required/><br/>
+                <label for="email">Email</label><br/>
+                <input type="email" name="email" placeholder="Enter Student email" required/><br/>
+                <label for="branch">Branch</label><br/>
+                <select name="branch" >
+                    <option value="CS">CS</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="IT">IT</option>
+                    <option value="CSE-DS">CSE-DS</option>
+                    <option value="ME">ME</option>
+                    <option value="CSE-AIML">CSE-AIML</option>
+                </select><br/>
+                <label for="address">Current Address</label><br/>
+                <textarea rows="5" cols="30" required>Enter Your Current Address</textarea><br/>
+            <button type="submit">Save Profile</button>
+            <input type="reset" value="Reset"/>
+            
+        </div>
+        <!-- <div class="image">
+            <label for="name">Upload Image</label><br/>
+            <input type="file" name="profile_pic" placeholder="Upload latest Image" required/><br/>  
+        </div> -->
+       </form>
+    </div>
+    <script>
+        function validate(){
+           const sname= document.register.sname.value;
+           const mobile= document.register.mobile.value;
+           if(sname==""){
+            alert("Name field should not be empty");
+           }
+           if(mobile=="" || isNaN(mobile)){
+            alert("Mobile number is empty or invalid");
+           }
+           document.getElementById("register").submit();
+        }
+        const btn1=document.getElementById("register");
+        btn1.addEventListener("submit",(e)=>{
+            console.log("inside submit event",e);
+            e.preventDefault();
+            validate();
+            
+        });
+    </script>
+</body>
+</html>

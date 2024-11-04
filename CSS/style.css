@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+.container{
+    border: 2px solid green;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+.reg-form{
+    padding: 10px 20px;
+    margin: 5px 10px;
+     border: 2px solid red;
+     width: 30%;
+     background-color:aquamarine;
+}
+.reg-form input[type=text]{
+     
+     background-color: greenyellow;
+}
+.image{
+     padding: 10px 20px;
+     margin: 5px 10px;
+     border: 2px solid red;
+     width: 20%;
+     background-color:aquamarine;
+}

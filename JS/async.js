@@ -43,13 +43,17 @@ function displaydata(){
     });   
 }
 
-register()
-.then(sendemail)
-.then(login)
-.then(getdata)
-.then(displaydata)
-.catch((err)=>{
-    console.log("Error: ",err);
-});
+async function authenticate(){
+    await register();
+    await sendemail();
+    await login();
+    await getdata();
+    await displaydata();
+}
 
+authenticate().then(()=>{
+    console.log("Success");
+}).catch((err)=>{
+    console.log("Error:", err);
+});
 console.log("work other app");

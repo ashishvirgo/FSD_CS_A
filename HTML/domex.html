@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom ex</title>
+    
+</head>
+<body>
+    <button id="btn1">Add Paragraph</button>
+    <p>This is first paragraph</p>
+</body>
+<script>
+    function addPara(){
+      const para=document.createElement("p");
+       para.innerHTML="<h1>This is new Paragraph<h1>";
+          const mybody=document.getElementsByTagName("body");
+          mybody[0].appendChild(para);
+    }
+    const btn1=document.getElementById("btn1");
+    btn1.addEventListener("click",(event)=>{
+       addPara();
+    });
+    btn1.addEventListener("click",(event)=>{
+       console.log("event clicked");
+       
+    },true)
+  </script>
+</html>
