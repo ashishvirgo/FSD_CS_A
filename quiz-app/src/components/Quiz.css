@@ -1,0 +1,33 @@
+.header{
+    background-color: black;
+    color: white;
+    height: 10vh;
+}
+.footer{
+    background-color: black;
+    color: white;
+    height: 10vh;
+}
+.Quiz{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 25px;
+    width: 50%;
+    height: 70vh;
+    font-size: 25px;
+    background-color:goldenrod;
+    color: black; 
+}
+.startquiz{
+    background-color: greenyellow;
+    color: red;
+    justify-items: center;
+}
+.startquiz .btn{
+    margin:auto;
+    width: 150px;
+    height: 100px;
+    
+    background-color: aqua;
+}
