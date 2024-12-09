@@ -1,11 +1,17 @@
 import {Routes,Route} from 'react-router-dom'
+import Home from './Components/Home'
+import Stopwatch from './Components/Stopwatch'
+import Refex from './Components/Refex'
+import Parent from './Components/Parent'
 const App=()=>{
   return(
     <div>
     <Routes>
-      <Route path="/" element={<h1>Home Page</h1>}></Route>
+      <Route path="/" element={<Home/>}></Route>
       <Route path="/counter" element={<h1>Counter App</h1>}></Route>
-      <Route path="/stopwatch" element={<h1>stop Watch App</h1>}></Route>
+      <Route path="/stopwatch" element={<Stopwatch/>}></Route>
+      <Route path="/refex" element={<Refex/>}></Route>
+      <Route path="/contextex" element={<Parent/>}></Route>
       <Route path="*" element={<h1>No Page Available</h1>}></Route>
     </Routes>
     </div>
