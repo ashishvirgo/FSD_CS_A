@@ -1,0 +1,25 @@
+nav{
+    background-color: gold;
+    border: 1px solid blue;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li a{
+    text-decoration: none;
+}
+.datatable{
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    border: 1px solid blue;
+}
+table td{
+    border: 1px solid red;
+}
+table th{
+    border: 1px solid red;
+}
