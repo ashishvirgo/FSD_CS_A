@@ -29,5 +29,27 @@ const createUser=async(req,res)=>{
       res.status(500).json({message: err.message})
     }
 }
+const updateUser=async(req,res)=>{
+  try{
+    const email=req.params.email;
+      const {name,password,role}=req.body;
+     const updateuser=User.findOneAndUpdate({email},{name,password,role},{new:true})
+     res.status(200).json(updateuser);
+  }
+  catch(err){
+    res.status(500).json({message: err.message})
+  }
+}
 
-module.exports={getAllUsers,getUser,createUser}
+const deleteUser=async(req,res)=>{
+  try{
+    const email=req.params.email;
+     const deleteduser=User.deleteOne({email});
+     res.status(200).json(deleteduser);
+  }
+  catch(err){
+    res.status(500).json({message: err.message})
+  }
+}
+
+module.exports={getAllUsers,getUser,createUser,updateUser,deleteUser}
