@@ -7,7 +7,7 @@ dotenv.config();
 const app=express();
 const Port=process.env.PORT || 3000;
 dbConnect();
-app.use(cors());
+app.use(cors);
 app.use(express.json());
 app.use("/",userroutes)
 app.listen(Port,()=>{
